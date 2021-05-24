@@ -33,21 +33,21 @@ Bootstrap 5 入門ノート
 1. 任意のフォルダに index.html を作成
 1. index.html と同じ階層に上記でダウンロードした css と js フォルダをコピー
 1. index.html を記述
-    ```
-    <!DOCTYPE html>
-    <html lang="ja">
-    <head>
-        <meta charset="UTF-8">
-        <title>xxx</title>
-        <meta name="viewport" content="width=device-width,initial-scale=1.0">
-        <link rel="stylesheet" href="css/bootstrap.css">
-        <script src="js/bootstrap.js"></script>
-    </head>
-    <body>
-        Hello,world!
-    </body>
-    </html>
-    ```
+```
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>xxx</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <script src="js/bootstrap.js"></script>
+</head>
+<body>
+    Hello,world!
+</body>
+</html>
+```
 
 実行環境：Bootstrap 5.0.1、Google Chrome 90、Windows 10、Visual Studio Code  
 作成者：夢寐郎  
