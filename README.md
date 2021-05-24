@@ -1,5 +1,5 @@
 # Bootstrap
-Bootstrap 5 入門ノート
+Bootstrap 5 超入門ノート
 
 ### <b>INDEX</b>
 
