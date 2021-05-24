@@ -29,7 +29,8 @@ Bootstrap 5 入門ノート
 1. "bootstrap-5.0.1-dist" フォルダ内の CSS と js フォルダを確認
 
 ### サンプル作成
-1. XXXX
+1. Visual Studio Code を起動
+1. 任意のフォルダに index.html を作成
 
 
 実行環境：Bootstrap 5.0.1、Google Chrome 60、Windows 10、Visual Studio Code    
@@ -52,4 +53,4 @@ Bootstrap 5 入門ノート
 XXXX
 ```
 
-© 202021 夢寐郎
+© 2021 夢寐郎
