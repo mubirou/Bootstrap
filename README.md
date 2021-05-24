@@ -31,31 +31,17 @@ Bootstrap 5 入門ノート
 ### サンプル作成
 1. Visual Studio Code を起動
 1. 任意のフォルダに index.html を作成
-1. 以下のコードを記述
-    ```
-    <!DOCTYPE html>
-    <html lang="ja">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width,initial-scale=1.0">
-        <title>xxx</title>
-    </head>
-    <body>
-        Hello,world!
-    </body>
-    </html>
-    ```
 1. index.html と同じ階層に上記でダウンロードした css と js フォルダをコピー
-1. index.html を変更
+1. index.html を記述
     ```
     <!DOCTYPE html>
     <html lang="ja">
     <head>
         <meta charset="UTF-8">
+        <title>xxx</title>
         <meta name="viewport" content="width=device-width,initial-scale=1.0">
         <link rel="stylesheet" href="css/bootstrap.css">
         <script src="js/bootstrap.js"></script>
-        <title>xxx</title>
     </head>
     <body>
         Hello,world!
