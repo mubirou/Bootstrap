@@ -29,7 +29,7 @@ Bootstrap 5 入門ノート
 1. "bootstrap-5.0.1-dist" フォルダ内の CSS と js フォルダを確認
 
 
-実行環境：Google Chrome 60、Windows 10、Visual Studio Code    
+実行環境：Bootstrap 5.0.1、Google Chrome 60、Windows 10、Visual Studio Code    
 作成者：夢寐郎  
 作成日：2021年05月XX日  
 
