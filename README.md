@@ -31,9 +31,39 @@ Bootstrap 5 入門ノート
 ### サンプル作成
 1. Visual Studio Code を起動
 1. 任意のフォルダに index.html を作成
+1. 以下のコードを記述
+    ```
+    <!DOCTYPE html>
+    <html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <title>xxx</title>
+    </head>
+    <body>
+        Hello,world!
+    </body>
+    </html>
+    ```
+1. index.html と同じ階層に上記でダウンロードした css と js フォルダをコピー
+1. index.html を変更
+    ```
+    <!DOCTYPE html>
+    <html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <link rel="stylesheet" href="css/bootstrap.css">
+        <script src="js/bootstrap.js"></script>
+        <title>xxx</title>
+    </head>
+    <body>
+        Hello,world!
+    </body>
+    </html>
+    ```
 
-
-実行環境：Bootstrap 5.0.1、Google Chrome 60、Windows 10、Visual Studio Code    
+実行環境：Bootstrap 5.0.1、Google Chrome 90、Windows 10、Visual Studio Code  
 作成者：夢寐郎  
 作成日：2021年05月XX日  
 
