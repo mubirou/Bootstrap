@@ -14,7 +14,7 @@ Bootstrap 5 入門ノート
 1. HTML / CSS / JavaScript から構成されるフレームワーク
 1. レシポンシブ Web デザイン対応
 1. Twitter 社が開発（2011年からオープンソース化）
-1. バージョン「5」の特徴
+1. バージョン「<b>5</b>」の特徴
     * jQuery は未使用
     * バニラ JavaScript（ネイティブ JavaScript）支持
     * IE10、IE11 は未サポート
