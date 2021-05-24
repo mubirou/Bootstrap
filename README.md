@@ -28,6 +28,9 @@ Bootstrap 5 入門ノート
 1. "bootstrap-5.0.1-dist.zip" を展開
 1. "bootstrap-5.0.1-dist" フォルダ内の CSS と js フォルダを確認
 
+### サンプル作成
+1. XXXX
+
 
 実行環境：Bootstrap 5.0.1、Google Chrome 60、Windows 10、Visual Studio Code    
 作成者：夢寐郎  
