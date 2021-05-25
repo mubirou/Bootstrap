@@ -50,7 +50,7 @@ Bootstrap 5 超入門ノート
     </body>
     </html>
     ```
-1. サンプル結果は[こちら](https://mubirou.github.io/Bootstrap/examples/html/001.html)
+1. 結果は[こちら](https://mubirou.github.io/Bootstrap/examples/html/001.html)
 
 実行環境：Bootstrap 5.0.1、Google Chrome 90、Windows 10、Visual Studio Code  
 作成者：夢寐郎  
