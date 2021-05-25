@@ -8,7 +8,7 @@ Bootstrap 5 超入門ノート
 #
 
 <a name="aboutBootstrap"></a>
-001 # <b>Bootstrap について</b>
+# 001 <b>Bootstrap について</b>
 
 ### 特徴
 1. HTML / CSS / JavaScript から構成されるフレームワーク
