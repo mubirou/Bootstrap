@@ -7,8 +7,6 @@ Bootstrap 5 超入門ノート
 |:--:|:--|:--|:--|
 |001|[Bootstrap について](#aboutBootstrap)|002|[XXXXXXXXX](#)|
 |003|[XXXXXXXXX](#)|004|[XXXXXXXXX](#)|
-|005|[XXXXXXXXX](#)|006|[XXXXXXXXX](#)|
-|007|[XXXXXXXXX](#)|008|[XXXXXXXXX](#)|
 #
 
 <a name="aboutBootstrap"></a>
