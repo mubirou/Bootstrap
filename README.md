@@ -5,7 +5,7 @@ Bootstrap 5 超入門ノート
 
 |No.|内容|No.|内容|
 |:--:|:--|:--|:--|
-|001|[Bootstrap について](#aboutBootstrap)|002|[XXXXXXXXX](#)|
+|001|[Bootstrap について](#aboutBootstrap)|002|[ボタン](#button)|
 |003|[XXXXXXXXX](#)|004|[XXXXXXXXX](#)|
 #
 
@@ -59,10 +59,48 @@ Bootstrap 5 超入門ノート
 
 
 
-<a name="XXXXX"></a>
-# 002 <b>XXXXX</b>
+<a name="button"></a>
+# 002 <b>ボタン</b>
 
-### XXXX
+参照：https://getbootstrap.jp/docs/5.0/components/buttons/
+
+### ボタンの種類
+1. ８色＋リンクボタン
+1. <a><input>要素での利用
+1. アウトラインボタン
+1. ボタンのサイズ（Large or Small）
+1. 非アクティブボタン
+1. 全幅ブロックボタン
+1. トグルボタン
+
+### サンプルコード
+```
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <title>xxx</title>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <link rel="stylesheet" href="../css/bootstrap.css">
+        <script src="../js/bootstrap.js"></script>
+    </head>
+    <body>
+        <button type="button" class="btn btn-primary">PRIMARY</button>
+    </body>
+</html>
+```
+サンプルは[こちら](https://mubirou.github.io/Bootstrap/examples/html/002.html)
+
+実行環境：Bootstrap 5.0.1、Google Chrome 90、Windows 10、Visual Studio Code  
+作成者：夢寐郎  
+作成日：2021年05月25日  
+
+
+
+<a name="XXXXX"></a>
+# 00X <b>XXXXX</b>
+
+### XXXXX
 1. XXXX
 1. XXXX
     * XXXX
@@ -71,5 +109,10 @@ Bootstrap 5 超入門ノート
 ```
 XXXX
 ```
+
+実行環境：Bootstrap 5.0.1、Google Chrome 90、Windows 10、Visual Studio Code  
+作成者：夢寐郎  
+作成日：2021年0X月XX日  
+
 
 © 2021 夢寐郎
