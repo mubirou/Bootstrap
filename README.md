@@ -3,7 +3,7 @@ Bootstrap 5 超入門ノート
 
 ### <b>INDEX</b>
 
-* [Bootstrap について](#aboutBootstrap)
+* 001 [Bootstrap について](#aboutBootstrap)
 * XXXX
 #
 
