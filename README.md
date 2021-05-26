@@ -101,7 +101,7 @@ Bootstrap 5 超入門ノート
 
 参考：https://getbootstrap.jp/docs/5.0/components/button-group/
 
-### Checkbox and radio button groups
+### ラジオボタングループ
 これが一番使いやすそう
 ```
 <!DOCTYPE html>
@@ -128,7 +128,7 @@ Bootstrap 5 超入門ノート
 </html>
 ```
 
-デフォルトで何れかを選択しておきたい場合は最後に checked を記述する（記述例）
+デフォルトで何れかを選択しておきたい場合は最後に checked を追加する（記述例）
 ```
 <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" checked>>
 ```
