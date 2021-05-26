@@ -6,7 +6,7 @@ Bootstrap 5 超入門ノート
 |No.|内容|No.|内容|
 |:--:|:--|:--|:--|
 |001|[Bootstrap について](#aboutBootstrap)|002|[ボタン](#button)|
-|003|[XXXXXXXXX](#)|004|[XXXXXXXXX](#)|
+|003|[ボタングループ](#buttonGroup)|004|[XXXXXXXXX](#)|
 |005|[XXXXXXXXX](#)|006|[XXXXXXXXX](#)|
 #
 
@@ -93,6 +93,44 @@ Bootstrap 5 超入門ノート
 実行環境：Bootstrap 5.0.1、Google Chrome 90、Windows 10、Visual Studio Code  
 作成者：夢寐郎  
 作成日：2021年05月25日  
+
+
+
+<a name="buttonGroup"></a>
+# 00X <b>ボタングループ</b>
+
+参考：https://getbootstrap.jp/docs/5.0/components/button-group/
+
+### Checkbox and radio button groups
+これが一番使いやすそう。
+```
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <title>xxx</title>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <link rel="stylesheet" href="../css/bootstrap.css">
+        <script src="../js/bootstrap.js"></script>
+    </head>
+    <body>
+        <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+            <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off">
+            <label class="btn btn-outline-danger" for="btnradio1">選択１</label>
+          
+            <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off">
+            <label class="btn btn-outline-danger" for="btnradio2">選択２</label>
+          
+            <input type="radio" class="btn-check" name="btnradio" id="btnradio3" autocomplete="off">
+            <label class="btn btn-outline-danger" for="btnradio3">選択３</label>
+        </div>
+    </body>
+</html>
+```
+
+実行環境：Bootstrap 5.0.1、Google Chrome 90、Windows 10、Visual Studio Code  
+作成者：夢寐郎  
+作成日：2021年0X月XX日  
 
 
 
