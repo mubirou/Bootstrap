@@ -97,7 +97,7 @@ Bootstrap 5 超入門ノート
 
 
 <a name="buttonGroup"></a>
-# 00X <b>ボタングループ</b>
+# 003 <b>ボタングループ</b>
 
 参考：https://getbootstrap.jp/docs/5.0/components/button-group/
 
