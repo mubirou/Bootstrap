@@ -102,7 +102,7 @@ Bootstrap 5 超入門ノート
 参考：https://getbootstrap.jp/docs/5.0/components/button-group/
 
 ### Checkbox and radio button groups
-これが一番使いやすそう。
+これが一番使いやすそう
 ```
 <!DOCTYPE html>
 <html lang="ja">
@@ -128,9 +128,16 @@ Bootstrap 5 超入門ノート
 </html>
 ```
 
+デフォルトで何れかを選択しておきたい場合は最後に checked を記述する（記述例）
+```
+<input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" checked>>
+```
+
+サンプルは[こちら](https://mubirou.github.io/Bootstrap/examples/html/003.html)
+
 実行環境：Bootstrap 5.0.1、Google Chrome 90、Windows 10、Visual Studio Code  
 作成者：夢寐郎  
-作成日：2021年0X月XX日  
+作成日：2021年05月27日  
 
 
 
