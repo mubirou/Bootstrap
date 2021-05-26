@@ -115,14 +115,14 @@ Bootstrap 5 超入門ノート
     </head>
     <body>
         <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
-            <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off">
-            <label class="btn btn-outline-danger" for="btnradio1">選択１</label>
+            <input type="radio" class="btn-check" name="btnradio-A" id="btnradio-1" autocomplete="off">
+            <label class="btn btn-outline-danger" for="btnradio-1">選択１</label>
           
-            <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off">
-            <label class="btn btn-outline-danger" for="btnradio2">選択２</label>
+            <input type="radio" class="btn-check" name="btnradio-A" id="btnradio-2" autocomplete="off">
+            <label class="btn btn-outline-danger" for="btnradio-2">選択２</label>
           
-            <input type="radio" class="btn-check" name="btnradio" id="btnradio3" autocomplete="off">
-            <label class="btn btn-outline-danger" for="btnradio3">選択３</label>
+            <input type="radio" class="btn-check" name="btnradio-A" id="btnradio-3" autocomplete="off">
+            <label class="btn btn-outline-danger" for="btnradio-3">選択３</label>
         </div>
     </body>
 </html>
