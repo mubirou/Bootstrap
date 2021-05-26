@@ -130,7 +130,7 @@ Bootstrap 5 超入門ノート
 
 デフォルトで何れかを選択しておきたい場合は最後に checked を追加する（記述例）
 ```
-<input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" checked>>
+<input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" checked>
 ```
 
 サンプルは[こちら](https://mubirou.github.io/Bootstrap/examples/html/003.html)
