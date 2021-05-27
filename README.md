@@ -212,6 +212,8 @@ Bootstrap 5 超入門ノート
 </html>
 ```
 
+サンプルは[こちら](https://mubirou.github.io/Bootstrap/examples/html/004.html)
+
 実行環境：Bootstrap 5.0.1、Google Chrome 90、Ubuntu 20.04、Visual Studio Code  
 作成者：夢寐郎  
 作成日：2021年05月27日  
