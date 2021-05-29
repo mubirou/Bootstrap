@@ -150,40 +150,65 @@ Bootstrap 5 超入門ノート
 ```
 <!DOCTYPE html>
 <html lang="ja">
-
-<head>
-    <meta charset="UTF-8">
-    <title>xxx</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <link rel="stylesheet" href="../css/bootstrap.css">
-    <script src="../js/bootstrap.js"></script>
-</head>
-
-<body>
-    <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
-        <input type="radio" class="btn-check" name="btnradio-A" id="btnradio-1" autocomplete="off">
-        <label class="btn btn-outline-danger" for="btnradio-1">選択１</label>
-
-        <input type="radio" class="btn-check" name="btnradio-A" id="btnradio-2" autocomplete="off">
-        <label class="btn btn-outline-danger" for="btnradio-2">選択２</label>
-
-        <input type="radio" class="btn-check" name="btnradio-A" id="btnradio-3" autocomplete="off">
-        <label class="btn btn-outline-danger" for="btnradio-3">選択３</label>
-    </div>
-    <br>
-    <br>
-    <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
-        <input type="radio" class="btn-check" name="btnradio-B" id="btnradio-4" autocomplete="off" checked>
-        <label class="btn btn-outline-secondary" for="btnradio-4">選択Ａ</label>
-
-        <input type="radio" class="btn-check" name="btnradio-B" id="btnradio-5" autocomplete="off">
-        <label class="btn btn-outline-secondary" for="btnradio-5">選択Ｂ</label>
-
-        <input type="radio" class="btn-check" name="btnradio-B" id="btnradio-6" autocomplete="off">
-        <label class="btn btn-outline-secondary" for="btnradio-6">選択Ｃ</label>
-    </div>
-</body>
-
+    <head>
+        <meta charset="UTF-8">
+        <title>xxx</title>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <link rel="stylesheet" href="../css/bootstrap.css">
+        <script src="../js/bootstrap.js"></script>
+    </head>
+    <body>
+        <form style="max-width: 480px; margin: auto;">
+            <div class="mb-3">
+                <label for="name1" class="form-label">お名前（必須）</label>
+                <input class="form-control" id="name1" type="text" placeholder="例：鈴木太郎">
+            </div>
+            <div class="mb-3">
+                <label for="email1" class="form-label">e-mail（必須）</label>
+                <input type="email" class="form-control" id="email1" placeholder="例：example@gmail.com">
+            </div>
+            <div class="mb-3">
+                <label for="age1" class="form-label">年齢（オプション）</label>
+                <select class="form-select" id="age1">
+                    <option selected>選択してください</option>
+                    <option value="20歳未満">20歳未満</option>
+                    <option value="20-29歳">20-29歳</option>
+                    <option value="30-39歳">30-39歳</option>
+                    <option value="40-49歳">40-49歳</option>
+                    <option value="50-59歳">50-59歳</option>
+                    <option value="60-69歳">60-69歳</option>
+                    <option value="70-79歳">70-79歳</option>
+                    <option value="80歳以上">80歳以上</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label for="sex1" class="form-label">性別（オプション）</label>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="sex1">
+                    <label class="form-check-label" for="sex1">
+                        男
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="sex1">
+                    <label class="form-check-label" for="sex1">
+                        女
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="sex1">
+                    <label class="form-check-label" for="sex1">
+                        その他
+                    </label>
+                </div>
+            </div>
+            <div class="mb-3">
+                <label for="textarea1" class="form-label">備考欄（オプション）</label>
+                <textarea class="form-control" id="textarea1" rows="3" placeholder="ご不明な点ございましたらお書き下さい。"></textarea>
+              </div>
+            <button type="submit" class="btn btn-primary">送信</button>
+          </form>
+    </body>
 </html>
 ```
 
