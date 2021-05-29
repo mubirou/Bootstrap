@@ -6,8 +6,8 @@ Bootstrap 5 超入門ノート
 |No.|内容|No.|内容|
 |:--:|:--|:--|:--|
 |001|[Bootstrap について](#aboutBootstrap)|002|[ボタン](#button)|
-|003|[ボタングループ](#buttonGroup)|004|[XXXXXXXXX](#)|
-|005|[XXXXXXXXX](#)|006|[XXXXXXXXX](#)|
+|003|[ボタングループ](#buttonGroup)|004|[フォーム](#form)|
+|005|[アコーディオン](#accordion)|006|[XXXXXXXXX](#)|
 #
 
 <a name="aboutBootstrap"></a>
@@ -138,6 +138,109 @@ Bootstrap 5 超入門ノート
 実行環境：Bootstrap 5.0.1、Google Chrome 90、Windows 10、Visual Studio Code  
 作成者：夢寐郎  
 作成日：2021年05月27日  
+
+
+
+<a name="form"></a>
+# 004 <b>フォーム</b>
+
+参考：https://getbootstrap.jp/docs/5.0/forms/overview/
+
+### サンプルコード
+```
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <title>xxx</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <script src="../js/bootstrap.js"></script>
+</head>
+
+<body>
+    <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+        <input type="radio" class="btn-check" name="btnradio-A" id="btnradio-1" autocomplete="off">
+        <label class="btn btn-outline-danger" for="btnradio-1">選択１</label>
+
+        <input type="radio" class="btn-check" name="btnradio-A" id="btnradio-2" autocomplete="off">
+        <label class="btn btn-outline-danger" for="btnradio-2">選択２</label>
+
+        <input type="radio" class="btn-check" name="btnradio-A" id="btnradio-3" autocomplete="off">
+        <label class="btn btn-outline-danger" for="btnradio-3">選択３</label>
+    </div>
+    <br>
+    <br>
+    <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+        <input type="radio" class="btn-check" name="btnradio-B" id="btnradio-4" autocomplete="off" checked>
+        <label class="btn btn-outline-secondary" for="btnradio-4">選択Ａ</label>
+
+        <input type="radio" class="btn-check" name="btnradio-B" id="btnradio-5" autocomplete="off">
+        <label class="btn btn-outline-secondary" for="btnradio-5">選択Ｂ</label>
+
+        <input type="radio" class="btn-check" name="btnradio-B" id="btnradio-6" autocomplete="off">
+        <label class="btn btn-outline-secondary" for="btnradio-6">選択Ｃ</label>
+    </div>
+</body>
+
+</html>
+```
+
+ サンプルは[こちら](https://mubirou.github.io/Bootstrap/examples/html/004.html)
+
+実行環境：Bootstrap 5.0.1、Google Chrome 90、Windows 10、Visual Studio Code  
+作成者：夢寐郎  
+作成日：2021年05月27日  
+
+
+
+<a name="accordion"></a>
+# 005 <b>アコーディオン</b>
+
+参考：https://getbootstrap.jp/docs/5.0/components/accordion/
+
+### サンプルコード
+```
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <title>xxx</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <script src="../js/bootstrap.js"></script>
+</head>
+
+<body>
+    <div class="accordion-01" id="accordion-1">
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="heading-1">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapse-1" aria-expanded="false" aria-controls="collapse-1">
+                    メニュー
+                </button>
+            </h2>
+            <div id="collapse-1" class="accordion-collapse collapse" aria-labelledby="heading-1"
+                data-bs-parent="#accordion-1">
+                <div class="accordion-body">
+                    メニューの本文。〇〇〇〇〇<br>
+                    〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+```
+
+ サンプルは[こちら](https://mubirou.github.io/Bootstrap/examples/html/005.html)
+
+実行環境：Bootstrap 5.0.1、Google Chrome 90、Windows 10、Visual Studio Code  
+作成者：夢寐郎  
+作成日：2021年05月29日  
 
 
 
