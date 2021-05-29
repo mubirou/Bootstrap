@@ -3,11 +3,10 @@ Bootstrap 5 超入門ノート
 
 ### <b>INDEX</b>
 
-|No.|内容|No.|内容|
-|:--:|:--|:--|:--|
-|001|[Bootstrap について](#aboutBootstrap)|002|[ボタン](#button)|
-|003|[ボタングループ](#buttonGroup)|004|[フォーム](#form)|
-|005|[アコーディオン](#accordion)|006|[XXXXXXXXX](#)|
+|No.|内容|No.|内容|No.|内容|
+|:--:|:--|:--|:--|:--|:--|
+|001|[Bootstrap について](#aboutBootstrap)|002|[ボタン](#button)|003|[ボタングループ](#buttonGroup)|
+|004|[フォーム](#form)|005|[アコーディオン](#accordion)|006|[XXXXXXXXX](#)|
 #
 
 <a name="aboutBootstrap"></a>
