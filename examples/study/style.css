@@ -1,51 +1,63 @@
 @charset "utf-8";
 /* style.css */
 *, *::before, *::after {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
+
 body, h1, p {
-    margin: 0;
+  margin: 0;
 }
+
 body {
-    font-family: "Noto Sans JP", "Roboto", "Arial", sans-serif;
-    background-color: #fff;
-    padding: 10px;
+  font-family: "Noto Sans JP", "Roboto", "Arial", sans-serif;
+  background-color: #fff;
+  padding: 10px;
 }
+
 header, footer, nav {
-    padding: 10px;
-    border: 1px solid #ccc;
-    margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
 }
+
 header, footer {
-    background-color: #f3f3f3;
+  background-color: #f3f3f3;
 }
+
 nav {
-    background-color: #ddf;
+  background-color: #ddf;
 }
+
 .gallery-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    justify-content: flex-start; /* Align items to the start of the container */
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
 }
+
 section {
-    border: 1px solid #ccc;
-    margin-bottom: 10px; /* Add bottom margin for spacing */
-    flex: 1 1 auto; /* Allow flex items to grow and shrink */
-    max-width: 300px; /* Maximum width of each section */
+  border: 1px solid #ccc;
+  margin-bottom: 10px; /* Add bottom margin for spacing */
+  max-width: 300px; /* Maximum width of each section */
+  flex: 1 1 calc(50% - 20px); /* Start with 2 columns layout */
 }
+
 section img {
-    width: 100%; /* Makes image responsive */
-    height: auto; /* Maintain aspect ratio */
-    display: block; /* Removes bottom space under the image */
+  width: 100%; /* Makes image responsive */
+  height: auto; /* Maintain aspect ratio */
+  display: block; /* Removes bottom space under the image */
 }
-@media (max-width: 1200px) {
-    section {
-        flex: 1 1 calc(50% - 20px); /* 2 columns layout */
-    }
+
+/* Adjustments for larger screen sizes */
+@media (min-width: 641px) {
+  section {
+    /* For screens larger than 641px, maintain 2 columns layout */
+    flex: 1 1 calc(50% - 20px);
+  }
 }
-@media (max-width: 640px) {
-    section {
-        flex: 1 1 calc(50% - 20px); /* Minimum of 2 columns layout */
-    }
+
+@media (min-width: 961px) {
+  section {
+    /* For screens larger than 961px, use a 3 columns layout */
+    flex: 1 1 calc(33.33% - 20px);
+  }
 }
