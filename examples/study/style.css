@@ -26,25 +26,26 @@ nav {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
+    justify-content: flex-start; /* Align items to the start of the container */
 }
 section {
-    flex: 1 1 calc(33.33% - 20px); /* Adjust the width calculation to include the gap */
     border: 1px solid #ccc;
-    padding: 5px; /* Adjust padding to fit the image better */
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* Optional: Adds a subtle shadow for styling */
+    margin-bottom: 10px; /* Add bottom margin for spacing */
+    flex: 1 1 auto; /* Allow flex items to grow and shrink */
+    max-width: 300px; /* Maximum width of each section */
 }
 section img {
     width: 100%; /* Makes image responsive */
     height: auto; /* Maintain aspect ratio */
     display: block; /* Removes bottom space under the image */
 }
-@media (max-width: 1080px) {
+@media (max-width: 1200px) {
     section {
-        flex: 1 1 calc(50% - 20px);
+        flex: 1 1 calc(50% - 20px); /* 2 columns layout */
     }
 }
 @media (max-width: 640px) {
     section {
-        flex: 1 1 calc(100% - 20px);
+        flex: 1 1 calc(50% - 20px); /* Minimum of 2 columns layout */
     }
 }
