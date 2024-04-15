@@ -1,43 +1,54 @@
 @charset "utf-8";
-/* style.css */
+/* Reset some default styling */
 *, *::before, *::after {
-    box-sizing: border-box; /* paddingとborderをwidthに含める */
+  box-sizing: border-box;
 }
+body, h1, p {
+  margin: 0;
+}
+/* Apply a consistent base margin around the elements */
 body {
-    margin: 0;
-    font-family: "Noto Sans JP", "Roboto", "Arial", sans-serif;
+  margin: 10px;
+  font-family: "Noto Sans JP", "Roboto", "Arial", sans-serif;
 }
-header, nav, footer {
-    border: 1px solid #ccc;
-    padding: 10px;
-    margin: 10px; /* 上下左右に10pxのマージンを設定 */
-    background-color: #f3f3f3;
+header, footer, nav, .gallery-container, section {
+  margin: 10px 0;
 }
-nav {
-    background-color: #ddf;
+/* Ensure the nav and footer backgrounds extend fully if they have internal margins */
+nav, footer {
+  background-color: #f3f3f3;
 }
+/* Style for header and nav */
+header, nav {
+  border: 1px solid #ccc;
+  padding: 10px;
+  background-color: #f3f3f3;
+}
+/* Gallery container should negate the margin of the sections on the sides */
 .gallery-container {
-    display: flex;
-    flex-wrap: wrap;
-    padding: 0; /* コンテナのパディングを0に設定 */
-    margin: 0 -10px; /* セクション間の負のマージンで横のギャップを設定 */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  margin-left: -10px;
+  margin-right: -10px;
 }
+/* Sections need padding and to maintain the 10px margin between them */
 section {
-    border: 1px solid #ccc;
-    padding: 10px;
-    margin: 0 10px 20px; /* 上は0、左右は10px、下は20pxのマージンを設定 */
-    background-color: #eef;
-    flex: 0 1 calc(33.33% - 22px); /* 3つ並べる計算、22pxは左右のマージンとボーダー2pxを引いた値 */
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin: 0 10px 10px 10px;
+  background-color: #eef;
+  flex: 1 1 calc(33.33% - 20px); /* 100% / 3 - margins */
 }
-
+/* Adjustments for when there's only enough space for 2 sections per row */
 @media (max-width: 1080px) {
-    section {
-        flex: 0 1 calc(50% - 22px); /* 2つ並べる計算 */
-    }
+  section {
+    flex: 1 1 calc(50% - 20px); /* 100% / 2 - margins */
+  }
 }
-
+/* Adjustments for when there's only enough space for 1 section per row */
 @media (max-width: 640px) {
-    section {
-        flex: 0 1 calc(100% - 22px); /* 1列にする計算 */
-    }
+  section {
+    flex: 1 1 calc(100% - 20px); /* 100% / 1 - margins */
+  }
 }
