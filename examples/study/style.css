@@ -1,52 +1,45 @@
 @charset "utf-8";
 /* style.css */
 *, *::before, *::after {
-    box-sizing: border-box;
+    box-sizing: border-box; /* paddingとborderをwidthに含める */
 }
 body {
+    margin: 0;
     font-family: "Noto Sans JP", "Roboto", "Arial", sans-serif;
 }
-header, nav, footer {
+header, footer {
     border: 1px solid #ccc;
     padding: 10px;
-    margin: 10px;
-}
-header {
     background-color: #f3f3f3;
 }
 nav {
     background-color: #ddf;
 }
-footer {
-    background-color: #f3f3f3;
-}
-
 .gallery-container {
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    gap: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: -10px; /* sectionのmarginと相殺する */
 }
-
 section {
     border: 1px solid #ccc;
     padding: 10px;
+    margin: 10px;
     background-color: #eef;
-}
-
-@media (max-width: 1920px) {
-    .gallery-container {
-        grid-template-columns: repeat(6, 1fr); /* 横幅1920pxでは、6列 */
-    }
+    flex: 1 1 calc((100% / 6) - 20px); /* 6個並べる計算 */
+    box-sizing: border-box; /* paddingとborderをwidthに含める */
 }
 
 @media (max-width: 1080px) {
-    .gallery-container {
-        grid-template-columns: repeat(3, 1fr); /* 横幅1080pxでは、3列 */
+    section {
+        flex: 1 1 calc((100% / 3) - 20px); /* 3個並べる計算 */
     }
 }
 
 @media (max-width: 640px) {
     .gallery-container {
-        grid-template-columns: repeat(1, 1fr); /* 横幅640px以下では、1列 */
+        flex-direction: column;
+    }
+    section {
+        flex: 1 1 100%; /* 1列にする */
     }
 }
