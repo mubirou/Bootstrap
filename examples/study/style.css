@@ -32,13 +32,14 @@ nav {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
+  justify-content: center; /* Centers the items for better spacing on all screen sizes */
 }
 
 section {
   border: 1px solid #ccc;
   margin-bottom: 10px; /* Add bottom margin for spacing */
   max-width: 300px; /* Maximum width of each section */
-  flex: 1 1 calc(50% - 20px); /* Start with 2 columns layout */
+  flex: 1 1 calc(33.33% - 20px); /* Start with 3 columns layout */
 }
 
 section img {
@@ -47,17 +48,23 @@ section img {
   display: block; /* Removes bottom space under the image */
 }
 
-/* Adjustments for larger screen sizes */
-@media (min-width: 641px) {
+/* Adjustments for medium screen sizes to maintain 3 columns */
+@media (max-width: 1200px) and (min-width: 961px) {
   section {
-    /* For screens larger than 641px, maintain 2 columns layout */
-    flex: 1 1 calc(50% - 20px);
+    flex: 1 1 calc(33.33% - 20px); /* Maintain 3 columns layout */
   }
 }
 
-@media (min-width: 961px) {
+/* Adjustments for smaller screen sizes to maintain 2 columns */
+@media (max-width: 960px) and (min-width: 621px) {
   section {
-    /* For screens larger than 961px, use a 3 columns layout */
-    flex: 1 1 calc(33.33% - 20px);
+    flex: 1 1 calc(50% - 20px); /* Adjust for 2 columns layout */
+  }
+}
+
+/* Adjustments for smaller screen sizes to switch to 3 columns */
+@media (max-width: 620px) {
+  section {
+    flex: 1 1 calc(33.33% - 20px); /* Switch back to 3 columns layout */
   }
 }
