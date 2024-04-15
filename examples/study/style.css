@@ -1,17 +1,17 @@
 @charset "utf-8";
 /* style.css */
 *, *::before, *::after {
-    box-sizing: border-box; /* paddingとborderをwidthに含める */
+    box-sizing: border-box;
 }
 body {
     margin: 0;
+    padding: 5px; /* 全体のパディングを5pxに設定 */
     font-family: "Noto Sans JP", "Roboto", "Arial", sans-serif;
-    padding: 5px; /* body全体に適用されるパディングを設定 */
 }
-header, footer {
+header, nav, footer {
     border: 1px solid #ccc;
     padding: 10px;
-    margin: 0; /* headerとfooterの外周のマージンを0に設定 */
+    margin: 0 0 5px 0; /* 上部は0、下部はコンテンツと同じ5pxのマージン */
     background-color: #f3f3f3;
 }
 nav {
@@ -20,25 +20,24 @@ nav {
 .gallery-container {
     display: flex;
     flex-wrap: wrap;
-    margin: 0 -5px; /* コンテンツ項目間のマージンを相殺 */
+    margin: 0 -5px; /* コンテンツの外側マージンを相殺 */
 }
 section {
     border: 1px solid #ccc;
     padding: 10px;
-    margin: 0 5px 10px; /* 両側に5px、下に10pxのマージンを設定 */
+    margin: 5px; /* 上下左右に5pxのマージン */
     background-color: #eef;
-    flex: 0 1 calc(16.66% - 10px); /* 6個並べる計算(100% / 6 - 余白) */
+    flex: 0 1 calc(16.66% - 10px); /* 100% / 6からボーダーとパディングを引いた値 */
 }
 
 @media (max-width: 1080px) {
     section {
-        flex: 0 1 calc(33.33% - 10px); /* 3個並べる計算(100% / 3 - 余白) */
+        flex: 0 1 calc(33.33% - 10px); /* 100% / 3からボーダーとパディングを引いた値 */
     }
 }
 
 @media (max-width: 640px) {
     section {
-        flex: 0 1 calc(100% - 10px); /* 1列にする計算(100% - 余白) */
-        margin: 5px 0; /* 上下に5pxのマージンを設定し、左右のマージンを除去 */
+        flex: 0 1 calc(100% - 10px); /* フル幅からボーダーとパディングを引いた値 */
     }
 }
