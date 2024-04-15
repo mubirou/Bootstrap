@@ -6,27 +6,26 @@
 body {
     margin: 0;
     font-family: "Noto Sans JP", "Roboto", "Arial", sans-serif;
+    padding: 5px; /* body全体に適用されるパディングを設定 */
 }
 header, footer {
     border: 1px solid #ccc;
     padding: 10px;
-    margin: 5px; /* headerとfooterの外周のマージンを5pxに設定 */
+    margin: 0; /* headerとfooterの外周のマージンを0に設定 */
     background-color: #f3f3f3;
 }
 nav {
     background-color: #ddf;
-    margin: 5px 5px 0; /* navの下のマージンを除去 */
 }
 .gallery-container {
     display: flex;
     flex-wrap: wrap;
-    padding: 0 5px; /* コンテナの左右のパディングを5pxに設定 */
-    justify-content: flex-start; /* 左揃えに設定 */
+    margin: 0 -5px; /* コンテンツ項目間のマージンを相殺 */
 }
 section {
     border: 1px solid #ccc;
     padding: 10px;
-    margin: 5px; /* sectionの外周のマージンを5pxに設定 */
+    margin: 0 5px 10px; /* 両側に5px、下に10pxのマージンを設定 */
     background-color: #eef;
     flex: 0 1 calc(16.66% - 10px); /* 6個並べる計算(100% / 6 - 余白) */
 }
@@ -40,5 +39,6 @@ section {
 @media (max-width: 640px) {
     section {
         flex: 0 1 calc(100% - 10px); /* 1列にする計算(100% - 余白) */
+        margin: 5px 0; /* 上下に5pxのマージンを設定し、左右のマージンを除去 */
     }
 }
