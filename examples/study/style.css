@@ -15,30 +15,31 @@ header, footer {
 }
 nav {
     background-color: #ddf;
+    margin: 5px 5px 0 5px; /* 上にマージンがないため、headerの下マージンを消す */
 }
 .gallery-container {
     display: flex;
     flex-wrap: wrap;
-    margin: 0 5px; /* 左右のマージンを5pxに設定 */
+    margin: 0 5px; /* コンテナの左右のマージンを5pxに設定 */
 }
 section {
     border: 1px solid #ccc;
     padding: 10px;
-    margin: 5px; /* 全てのsectionに外周のマージンを5pxに設定 */
+    margin: 0 5px 10px; /* 上にマージンがないため、各sectionの上マージンを消す */
     background-color: #eef;
-    flex-basis: calc(16.66% - 10px); /* 6個並べる計算(100% / 6 - 余白) */
+    flex-basis: calc(16.66% - 11px); /* 6個並べる計算(100% / 6 - 余白 - ボーダー2px) */
     flex-grow: 1;
 }
 
 @media (max-width: 1080px) {
     section {
-        flex-basis: calc(33.33% - 10px); /* 3個並べる計算(100% / 3 - 余白) */
+        flex-basis: calc(33.33% - 11px); /* 3個並べる計算(100% / 3 - 余白 - ボーダー2px) */
     }
 }
 
 @media (max-width: 640px) {
     section {
         flex-basis: 100%; /* 1列にする */
-        margin: 5px; /* 外周のマージンを5pxに設定 */
+        margin: 0 5px 10px; /* 両端に5pxのマージンを設定し、下に10px */
     }
 }
