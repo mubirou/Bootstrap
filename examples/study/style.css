@@ -1,54 +1,55 @@
 @charset "utf-8";
-/* Reset some default styling */
+/* style.css */
 *, *::before, *::after {
-  box-sizing: border-box;
+    box-sizing: border-box; /* Ensure padding and border are included in the width and height */
 }
-body, h1, p {
-  margin: 0;
-}
-/* Apply a consistent base margin around the elements */
+
 body {
-  margin: 10px;
-  font-family: "Noto Sans JP", "Roboto", "Arial", sans-serif;
+    margin: 0;
+    padding: 0;
+    font-family: "Noto Sans JP", "Roboto", "Arial", sans-serif;
+    background: #fff;
 }
-header, footer, nav, .gallery-container, section {
-  margin: 10px 0;
+
+header, nav, main, footer {
+    padding: 10px;
+    border: 1px solid #ccc;
 }
-/* Ensure the nav and footer backgrounds extend fully if they have internal margins */
-nav, footer {
-  background-color: #f3f3f3;
+
+header, footer {
+    background-color: #f3f3f3;
 }
-/* Style for header and nav */
-header, nav {
-  border: 1px solid #ccc;
-  padding: 10px;
-  background-color: #f3f3f3;
+
+nav {
+    background-color: #ddf;
 }
-/* Gallery container should negate the margin of the sections on the sides */
+
+main {
+    margin: 10px 0; /* Add top and bottom margin for main */
+}
+
 .gallery-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-  margin-left: -10px;
-  margin-right: -10px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px; /* This sets the gap between the flex items */
+    justify-content: flex-start;
 }
-/* Sections need padding and to maintain the 10px margin between them */
+
 section {
-  border: 1px solid #ccc;
-  padding: 10px;
-  margin: 0 10px 10px 10px;
-  background-color: #eef;
-  flex: 1 1 calc(33.33% - 20px); /* 100% / 3 - margins */
+    flex: 1 1 calc(33.33% - 10px); /* Calculate width, subtract gap */
+    border: 1px solid #ccc;
+    padding: 10px;
+    background-color: #eef;
 }
-/* Adjustments for when there's only enough space for 2 sections per row */
+
 @media (max-width: 1080px) {
-  section {
-    flex: 1 1 calc(50% - 20px); /* 100% / 2 - margins */
-  }
+    section {
+        flex: 1 1 calc(50% - 10px); /* Calculate width for 2 columns layout, subtract gap */
+    }
 }
-/* Adjustments for when there's only enough space for 1 section per row */
+
 @media (max-width: 640px) {
-  section {
-    flex: 1 1 calc(100% - 20px); /* 100% / 1 - margins */
-  }
+    section {
+        flex: 1 1 calc(100% - 10px); /* Calculate width for 1 column layout, subtract gap */
+    }
 }
