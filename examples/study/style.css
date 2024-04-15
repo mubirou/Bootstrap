@@ -6,10 +6,10 @@
 body {
     font-family: "Noto Sans JP", "Roboto", "Arial", sans-serif;
 }
-header, nav, main, article, section, aside, footer {
+header, nav, footer {
     border: 1px solid #ccc;
     padding: 10px;
-    margin: 10px; /* すべての要素のマージンを統一 */
+    margin: 10px;
 }
 header {
     background-color: #f3f3f3;
@@ -17,29 +17,36 @@ header {
 nav {
     background-color: #ddf;
 }
-.content-container {
-    display: flex;
-    flex-wrap: wrap;
-}
-main {
-    flex-grow: 1;
-}
-article, section {
-    background-color: #eef; /* 背景色を統一 */
-}
-aside {
-    background-color: #fee;
-    min-width: 200px;
-    flex-basis: 200px; /* フレックスアイテムのベース幅を指定 */
-}
 footer {
     background-color: #f3f3f3;
 }
-@media (max-width: 640px) {
-    .content-container {
-        flex-direction: column;
+
+.gallery-container {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 10px;
+}
+
+section {
+    border: 1px solid #ccc;
+    padding: 10px;
+    background-color: #eef;
+}
+
+@media (max-width: 1920px) {
+    .gallery-container {
+        grid-template-columns: repeat(6, 1fr); /* 横幅1920pxでは、6列 */
     }
-    main, aside {
-        flex-basis: auto; /* フレックスベースの幅を自動調整に */
+}
+
+@media (max-width: 1080px) {
+    .gallery-container {
+        grid-template-columns: repeat(3, 1fr); /* 横幅1080pxでは、3列 */
+    }
+}
+
+@media (max-width: 640px) {
+    .gallery-container {
+        grid-template-columns: repeat(1, 1fr); /* 横幅640px以下では、1列 */
     }
 }
