@@ -10,6 +10,7 @@ body {
 header, footer {
     border: 1px solid #ccc;
     padding: 10px;
+    margin: 10px 10px; /* 上下に10pxのマージンを設定 */
     background-color: #f3f3f3;
 }
 nav {
@@ -18,28 +19,27 @@ nav {
 .gallery-container {
     display: flex;
     flex-wrap: wrap;
-    margin: -10px; /* sectionのmarginと相殺する */
+    justify-content: space-between; /* コンテンツ間にスペースを均等に分配 */
 }
 section {
     border: 1px solid #ccc;
     padding: 10px;
-    margin: 10px;
+    margin-bottom: 20px; /* 下に20pxのマージンを設定 */
     background-color: #eef;
-    flex: 1 1 calc((100% / 6) - 20px); /* 6個並べる計算 */
-    box-sizing: border-box; /* paddingとborderをwidthに含める */
+    flex: 1 1 calc(16.66% - 20px); /* 6個並べる計算(100% / 6 - 余白) */
 }
 
 @media (max-width: 1080px) {
     section {
-        flex: 1 1 calc((100% / 3) - 20px); /* 3個並べる計算 */
+        flex: 1 1 calc(33.33% - 20px); /* 3個並べる計算(100% / 3 - 余白) */
     }
 }
 
 @media (max-width: 640px) {
     .gallery-container {
-        flex-direction: column;
+        justify-content: center; /* 1列の時は中央寄せ */
     }
     section {
-        flex: 1 1 100%; /* 1列にする */
+        flex: 1 1 80%; /* 1列にする、幅は80%に */
     }
 }
