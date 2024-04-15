@@ -1,55 +1,50 @@
 @charset "utf-8";
 /* style.css */
 *, *::before, *::after {
-    box-sizing: border-box; /* Ensure padding and border are included in the width and height */
+    box-sizing: border-box;
 }
-
-body {
+body, h1, p {
     margin: 0;
-    padding: 0;
-    font-family: "Noto Sans JP", "Roboto", "Arial", sans-serif;
-    background: #fff;
 }
-
-header, nav, main, footer {
+body {
+    font-family: "Noto Sans JP", "Roboto", "Arial", sans-serif;
+    background-color: #fff;
+    padding: 10px;
+}
+header, footer, nav {
     padding: 10px;
     border: 1px solid #ccc;
+    margin-bottom: 10px;
 }
-
 header, footer {
     background-color: #f3f3f3;
 }
-
 nav {
     background-color: #ddf;
 }
-
-main {
-    margin: 10px 0; /* Add top and bottom margin for main */
-}
-
 .gallery-container {
     display: flex;
     flex-wrap: wrap;
-    gap: 10px; /* This sets the gap between the flex items */
-    justify-content: flex-start;
+    gap: 10px;
 }
-
 section {
-    flex: 1 1 calc(33.33% - 10px); /* Calculate width, subtract gap */
+    flex: 1 1 calc(33.33% - 20px); /* Adjust the width calculation to include the gap */
     border: 1px solid #ccc;
-    padding: 10px;
-    background-color: #eef;
+    padding: 5px; /* Adjust padding to fit the image better */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* Optional: Adds a subtle shadow for styling */
 }
-
+section img {
+    width: 100%; /* Makes image responsive */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Removes bottom space under the image */
+}
 @media (max-width: 1080px) {
     section {
-        flex: 1 1 calc(50% - 10px); /* Calculate width for 2 columns layout, subtract gap */
+        flex: 1 1 calc(50% - 20px);
     }
 }
-
 @media (max-width: 640px) {
     section {
-        flex: 1 1 calc(100% - 10px); /* Calculate width for 1 column layout, subtract gap */
+        flex: 1 1 calc(100% - 20px);
     }
 }
