@@ -1,31 +1,32 @@
 @charset "utf-8";
 /* style.css */
 *, *::before, *::after {
-    box-sizing: border-box;
+    box-sizing: border-box; /* paddingとborderをwidthに含める */
 }
 body {
     margin: 0;
     padding: 5px; /* 全体のパディングを5pxに設定 */
     font-family: "Noto Sans JP", "Roboto", "Arial", sans-serif;
 }
-header, nav, footer {
+header, footer {
     border: 1px solid #ccc;
     padding: 10px;
-    margin: 0 0 5px 0; /* 上部は0、下部はコンテンツと同じ5pxのマージン */
+    margin: 5px 0; /* headerとfooterの外周のマージンを上下に5pxに設定 */
     background-color: #f3f3f3;
 }
 nav {
     background-color: #ddf;
+    margin-bottom: 5px; /* navの下のマージンを5pxに設定 */
 }
 .gallery-container {
     display: flex;
     flex-wrap: wrap;
-    margin: 0 -5px; /* コンテンツの外側マージンを相殺 */
+    margin: 0 -5px; /* コンテナ内のsectionの左右マージンを相殺 */
 }
 section {
     border: 1px solid #ccc;
     padding: 10px;
-    margin: 5px; /* 上下左右に5pxのマージン */
+    margin: 0 5px 5px; /* sectionの外周のマージンを上に0px、左右に5px、下に5pxに設定 */
     background-color: #eef;
     flex: 0 1 calc(16.66% - 10px); /* 100% / 6からボーダーとパディングを引いた値 */
 }
@@ -39,5 +40,6 @@ section {
 @media (max-width: 640px) {
     section {
         flex: 0 1 calc(100% - 10px); /* フル幅からボーダーとパディングを引いた値 */
+        margin: 5px 0; /* sectionの外周のマージンを上下に5pxに設定 */
     }
 }
