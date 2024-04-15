@@ -1,0 +1,45 @@
+@charset "utf-8";
+/* style.css */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+body {
+    font-family: "Noto Sans JP", "Roboto", "Arial", sans-serif;
+}
+header, nav, main, article, section, aside, footer {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 10px; /* すべての要素のマージンを統一 */
+}
+header {
+    background-color: #f3f3f3;
+}
+nav {
+    background-color: #ddf;
+}
+.content-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+main {
+    flex-grow: 1;
+}
+article, section {
+    background-color: #eef; /* 背景色を統一 */
+}
+aside {
+    background-color: #fee;
+    min-width: 200px;
+    flex-basis: 200px; /* フレックスアイテムのベース幅を指定 */
+}
+footer {
+    background-color: #f3f3f3;
+}
+@media (max-width: 640px) {
+    .content-container {
+        flex-direction: column;
+    }
+    main, aside {
+        flex-basis: auto; /* フレックスベースの幅を自動調整に */
+    }
+}
