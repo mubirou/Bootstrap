@@ -1,62 +1,77 @@
 @charset "utf-8";
-/* style.css */
+/* Reset styles */
 *, *::before, *::after {
   box-sizing: border-box;
 }
-
 body, h1, p {
   margin: 0;
 }
+/* Apply a natural box layout model to all elements */
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
 
-body {
+/* Body and default styles */
+body
+{
   font-family: "Noto Sans JP", "Roboto", "Arial", sans-serif;
   background-color: #fff;
-  padding: 10px; /* Applies padding to the entire content of the page */
+  margin: 0;
+  padding: 0;
 }
 
-header, footer, nav {
+/* Header, Nav, Footer */
+header, nav, footer {
   padding: 10px;
   border: 1px solid #ccc;
-  margin-bottom: 10px; /* Adds spacing between the sections and the nav/footer */
-}
-
-header, footer {
   background-color: #f3f3f3;
 }
 
+/* Navigation */
 nav {
   background-color: #ddf;
+  margin-bottom: 10px; /* Adds spacing between nav and gallery */
 }
 
+/* Gallery Container */
 .gallery-container {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px; /* Adds space between the sections */
+  margin: -5px; /* Adjust for the gap */
 }
 
+/* Section - Gallery Items */
 section {
-  border: 1px solid #ccc;
-  margin-bottom: 10px; /* Adds spacing at the bottom of each section */
-  flex: 1 1 auto; /* Allows the section to grow and shrink as needed */
-  max-width: calc(50% - 22px); /* Adjusts for the padding and border */
+  flex: 1 1 auto;
+  margin: 5px; /* Half of the gap */
+  box-shadow: 0 0 5px rgba(0,0,0,0.2); /* Optional: adds shadow for depth */
 }
 
+/* Section Image */
 section img {
   width: 100%;
   height: auto;
   display: block;
 }
 
+/* Media Queries */
 @media (min-width: 961px) {
   section {
-    flex: 1 1 calc(33.33% - 22px); /* Adjusts for three columns with padding and border */
-    max-width: calc(33.33% - 22px);
+    flex: 0 0 calc(33.333% - 10px); /* 3 columns layout */
+  }
+}
+
+@media (max-width: 960px) and (min-width: 641px) {
+  section {
+    flex: 0 0 calc(50% - 10px); /* 2 columns layout */
   }
 }
 
 @media (max-width: 640px) {
   section {
-    flex: 1 1 100%; /* Full width for smaller screens */
-    max-width: 100%;
+    flex: 0 0 100%; /* 1 column layout */
   }
 }
