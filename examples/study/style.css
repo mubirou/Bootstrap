@@ -22,8 +22,8 @@ header, footer, nav {
   border: 1px solid #ccc;
   margin-bottom: 10px;
   background-color: #f3f3f3;
+  max-width: calc(100% - 20px); /* 左右のpadding分を除いた幅 */
 }
-
 nav {
   background-color: #ddf;
 }
@@ -59,9 +59,9 @@ section img {
   }
 }
 
-@media (min-width: 576px) and (max-width: 991px) {
+@media (min-width: 992px) {
   section {
-    flex: 0 0 calc(50% - 22px);
+    flex: 0 0 calc(50% - 22px); /* 50%に調整 */
     max-width: calc(50% - 22px);
   }
 }
