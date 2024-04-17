@@ -36,10 +36,8 @@ nav {
 }
 
 section {
-  border: 1px solid #ccc;
-  margin-bottom: 10px; /* Add bottom margin for spacing */
-  max-width: 300px; /* Maximum width of each section */
-  flex: 1 1 calc(33.33% - 20px); /* Start with 3 columns layout */
+  flex: 1 1 100%; /* This will stretch each section to full width of the container */
+  max-width: none; /* Remove the max-width restriction */
 }
 
 section img {
