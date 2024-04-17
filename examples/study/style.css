@@ -32,12 +32,14 @@ nav {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
-  justify-content: center; /* Centers the items for better spacing on all screen sizes */
+  justify-content: flex-start; /* Left align the items to match the header and nav */
 }
 
 section {
-  flex: 1 1 100%; /* This will stretch each section to full width of the container */
-  max-width: none; /* Remove the max-width restriction */
+  border: 1px solid #ccc;
+  margin-bottom: 10px; /* Add bottom margin for spacing */
+  flex: 1 1 100%; /* Each section will take full width of the screen minus the padding */
+  max-width: none; /* Override any previous max-width */
 }
 
 section img {
@@ -46,23 +48,4 @@ section img {
   display: block; /* Removes bottom space under the image */
 }
 
-/* Adjustments for medium screen sizes to maintain 3 columns */
-@media (max-width: 1200px) and (min-width: 961px) {
-  section {
-    flex: 1 1 calc(33.33% - 20px); /* Maintain 3 columns layout */
-  }
-}
-
-/* Adjustments for smaller screen sizes to maintain 2 columns */
-@media (max-width: 960px) and (min-width: 621px) {
-  section {
-    flex: 1 1 calc(50% - 20px); /* Adjust for 2 columns layout */
-  }
-}
-
-/* Adjustments for smaller screen sizes to switch to 3 columns */
-@media (max-width: 620px) {
-  section {
-    flex: 1 1 calc(33.33% - 20px); /* Switch back to 3 columns layout */
-  }
-}
+/* No need for media queries as sections will always take full width */
