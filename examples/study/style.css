@@ -3,51 +3,43 @@
 *, *::before, *::after {
   box-sizing: border-box;
 }
+
 body, h1, p {
   margin: 0;
 }
-/* Apply a natural box layout model to all elements */
-html {
-  box-sizing: border-box;
-}
-*, *:before, *:after {
-  box-sizing: inherit;
-}
 
 /* Body and default styles */
-body
-{
+body {
   font-family: "Noto Sans JP", "Roboto", "Arial", sans-serif;
   background-color: #fff;
-  margin: 0;
-  padding: 0;
+  padding: 10px;
 }
 
 /* Header, Nav, Footer */
-header, nav, footer {
+header, footer, nav {
   padding: 10px;
   border: 1px solid #ccc;
+  margin-bottom: 10px;
   background-color: #f3f3f3;
 }
 
-/* Navigation */
 nav {
   background-color: #ddf;
-  margin-bottom: 10px; /* Adds spacing between nav and gallery */
 }
 
 /* Gallery Container */
 .gallery-container {
   display: flex;
   flex-wrap: wrap;
-  margin: -5px; /* Adjust for the gap */
+  gap: 10px;
 }
 
 /* Section - Gallery Items */
 section {
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
   flex: 1 1 auto;
-  margin: 5px; /* Half of the gap */
-  box-shadow: 0 0 5px rgba(0,0,0,0.2); /* Optional: adds shadow for depth */
+  max-width: calc(50% - 22px); /* adjusts for 2 columns layout */
 }
 
 /* Section Image */
@@ -57,21 +49,24 @@ section img {
   display: block;
 }
 
-/* Media Queries */
+/* Media Queries for Responsive Layout */
 @media (min-width: 961px) {
   section {
-    flex: 0 0 calc(33.333% - 10px); /* 3 columns layout */
+    flex: 0 0 calc(33.333% - 22px); /* 3 columns layout */
+    max-width: calc(33.333% - 22px);
   }
 }
 
 @media (max-width: 960px) and (min-width: 641px) {
   section {
-    flex: 0 0 calc(50% - 10px); /* 2 columns layout */
+    flex: 0 0 calc(50% - 22px); /* 2 columns layout */
+    max-width: calc(50% - 22px);
   }
 }
 
 @media (max-width: 640px) {
   section {
     flex: 0 0 100%; /* 1 column layout */
+    max-width: 100%;
   }
 }
