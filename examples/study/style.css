@@ -11,13 +11,13 @@ body, h1, p {
 body {
   font-family: "Noto Sans JP", "Roboto", "Arial", sans-serif;
   background-color: #fff;
-  padding: 10px;
+  padding: 10px; /* Applies padding to the entire content of the page */
 }
 
 header, footer, nav {
   padding: 10px;
   border: 1px solid #ccc;
-  margin-bottom: 10px;
+  margin-bottom: 10px; /* Adds spacing between the sections and the nav/footer */
 }
 
 header, footer {
@@ -31,15 +31,14 @@ nav {
 .gallery-container {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
-  justify-content: flex-start; /* Items are aligned to the start of the container */
+  gap: 10px; /* Adds space between the sections */
 }
 
 section {
   border: 1px solid #ccc;
-  margin-bottom: 10px;
-  flex: 1 1 auto; /* Flexible basis and growing according to the screen size */
-  max-width: calc(50% - 20px); /* Maximum width for two columns layout */
+  margin-bottom: 10px; /* Adds spacing at the bottom of each section */
+  flex: 1 1 auto; /* Allows the section to grow and shrink as needed */
+  max-width: calc(50% - 22px); /* Adjusts for the padding and border */
 }
 
 section img {
@@ -48,18 +47,16 @@ section img {
   display: block;
 }
 
-/* Adjusts to 3 columns layout for larger screens */
 @media (min-width: 961px) {
   section {
-    flex: 1 1 calc(33.33% - 20px);
-    max-width: calc(33.33% - 20px);
+    flex: 1 1 calc(33.33% - 22px); /* Adjusts for three columns with padding and border */
+    max-width: calc(33.33% - 22px);
   }
 }
 
-/* Adjusts to 1 column layout for smaller screens */
 @media (max-width: 640px) {
   section {
-    flex: 1 1 100%;
+    flex: 1 1 100%; /* Full width for smaller screens */
     max-width: 100%;
   }
 }
