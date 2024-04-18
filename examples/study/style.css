@@ -11,6 +11,8 @@ body, h1, p {
 body {
   font-family: "Noto Sans JP", "Roboto", "Arial", sans-serif;
   background-color: #fff;
+  margin: 0;
+  padding: 0; /* No padding for the body */
 }
 
 header, footer, nav {
@@ -29,18 +31,14 @@ nav {
   flex-wrap: wrap;
   gap: 10px;
   justify-content: center; /* Center items within the container */
-  margin-right: -10px; /* Compensate for the right padding on the last item in a row */
-  margin-left: -10px; /* Compensate for the left padding on the first item in a row */
+  padding: 0 10px; /* Add horizontal padding */
 }
 
 section {
   border: 1px solid #ccc;
   margin-bottom: 10px; /* Bottom margin for spacing */
-  margin-right: 10px; /* Add right margin for each item */
-  margin-left: 10px; /* Add left margin for each item */
-  flex: 1 0 auto; /* Grow to fit the container minus margins */
-  max-width: calc(50% - 20px); /* Start with 2 columns and adjust for margins */
   box-sizing: border-box; /* Include padding and border in the element's total width and height */
+  flex: 1 0 auto; /* Grow to fit the container minus margins */
 }
 
 section img {
