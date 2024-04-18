@@ -11,7 +11,6 @@ body, h1, p {
 body {
   font-family: "Noto Sans JP", "Roboto", "Arial", sans-serif;
   background-color: #fff;
-  margin: 0;
   padding: 0; /* No padding for the body */
 }
 
@@ -29,16 +28,17 @@ nav {
 .gallery-container {
   display: flex;
   flex-wrap: wrap;
-  gap: 5px;
   justify-content: center; /* Center items within the container */
-  padding: 0 5px; /* Add horizontal padding */
+  gap: 10px;
+  padding: 0 10px; /* Horizontal padding */
 }
 
 section {
   border: 1px solid #ccc;
-  margin-bottom: 5px; /* Bottom margin for spacing */
-  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+  margin-bottom: 10px; /* Bottom margin for spacing */
   flex: 1 0 auto; /* Grow to fit the container minus margins */
+  max-width: calc(50% - 20px); /* Starting with 2 columns on mobile */
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
 }
 
 section img {
@@ -50,37 +50,35 @@ section img {
 /* Media Queries for Responsive Layout */
 @media (min-width: 601px) {
   section {
-    max-width: calc(50% - 20px); /* 2 columns for viewports wider than 600px */
+    /* For screens larger than 600px, adjust to 2 columns */
+    max-width: calc(50% - 20px);
   }
 }
 
-@media (max-width: 767px) {
+@media (min-width: 961px) {
   section {
-    flex: 1 1 calc(50% - 20px); /* Adjust to 2 columns layout */
-    max-width: calc(50% - 20px); /* Match max width to flex-basis */
+    /* For screens larger than 960px, adjust to 3 columns */
+    max-width: calc(33.333% - 20px);
   }
 }
 
-@media (min-width: 901px) {
+@media (min-width: 1281px) {
   section {
-    max-width: calc(33.333% - 20px); /* 3 columns for viewports wider than 900px */
-  }
-}
-
-@media (min-width: 1201px) {
-  section {
-    max-width: calc(25% - 20px); /* 4 columns for viewports wider than 1200px */
+    /* For screens larger than 1280px, adjust to 4 columns */
+    max-width: calc(25% - 20px);
   }
 }
 
 @media (min-width: 1501px) {
   section {
-    max-width: calc(20% - 20px); /* 5 columns for viewports wider than 1500px */
+    /* For screens larger than 1500px, adjust to 5 columns */
+    max-width: calc(20% - 20px);
   }
 }
 
 @media (min-width: 1801px) {
   section {
-    max-width: calc(16.666% - 20px); /* 6 columns for viewports wider than 1800px */
+    /* For screens larger than 1800px, adjust to 6 columns */
+    max-width: calc(16.666% - 20px);
   }
 }
