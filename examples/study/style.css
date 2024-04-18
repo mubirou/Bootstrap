@@ -1,6 +1,5 @@
 @charset "utf-8";
-
-/* Reset styles */
+/* style.css */
 *, *::before, *::after {
   box-sizing: border-box;
 }
@@ -9,18 +8,19 @@ body, h1, p {
   margin: 0;
 }
 
-/* Body and default styles */
 body {
   font-family: "Noto Sans JP", "Roboto", "Arial", sans-serif;
   background-color: #fff;
   padding: 10px;
 }
 
-/* Header, Nav, Footer */
 header, footer, nav {
   padding: 10px;
   border: 1px solid #ccc;
   margin-bottom: 10px;
+}
+
+header, footer {
   background-color: #f3f3f3;
 }
 
@@ -28,47 +28,22 @@ nav {
   background-color: #ddf;
 }
 
-/* Gallery Container */
 .gallery-container {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
+  justify-content: flex-start; /* Left align the items to match the header and nav */
 }
 
-/* Section - Gallery Items */
 section {
   border: 1px solid #ccc;
-  margin-bottom: 10px;
-  flex: 1 1 auto;
-  max-width: calc(50% - 22px); /* adjusts for 2 columns layout */
+  margin-bottom: 10px; /* Add bottom margin for spacing */
+  flex: 1 1 100%; /* Each section will take full width of the screen minus the padding */
+  max-width: none; /* Override any previous max-width */
 }
 
-/* Section Image */
 section img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-  display: block;
-}
-
-/* Media Queries for Responsive Layout */
-@media (max-width: 575px) {
-  section {
-    flex: 0 0 100%;
-    max-width: 100%;
-  }
-}
-
-@media (min-width: 576px) and (max-width: 991px) {
-  section {
-    flex: 0 0 calc(50% - 22px);
-    max-width: calc(50% - 22px);
-  }
-}
-
-@media (min-width: 992px) {
-  section {
-    flex: 0 0 calc(33.333% - 22px);
-    max-width: calc(33.333% - 22px);
-  }
+  width: 100%; /* Makes image responsive */
+  height: auto; /* Maintain aspect ratio */
+  display: block; /* Removes bottom space under the image */
 }
