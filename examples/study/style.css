@@ -32,18 +32,34 @@ nav {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
-  justify-content: flex-start; /* Left align the items to match the header and nav */
+  justify-content: flex-start; /* Items are aligned to the start of the container */
 }
 
 section {
   border: 1px solid #ccc;
-  margin-bottom: 10px; /* Add bottom margin for spacing */
-  flex: 1 1 100%; /* Each section will take full width of the screen minus the padding */
-  max-width: none; /* Override any previous max-width */
+  margin-bottom: 10px;
+  flex: 1 1 auto; /* Flexible basis and growing according to the screen size */
+  max-width: calc(50% - 20px); /* Maximum width for two columns layout */
 }
 
 section img {
-  width: 100%; /* Makes image responsive */
-  height: auto; /* Maintain aspect ratio */
-  display: block; /* Removes bottom space under the image */
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Adjusts to 3 columns layout for larger screens */
+@media (min-width: 961px) {
+  section {
+    flex: 1 1 calc(33.33% - 20px);
+    max-width: calc(33.33% - 20px);
+  }
+}
+
+/* Adjusts to 1 column layout for smaller screens */
+@media (max-width: 640px) {
+  section {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
 }
