@@ -11,13 +11,12 @@ body, h1, p {
 body {
   font-family: "Noto Sans JP", "Roboto", "Arial", sans-serif;
   background-color: #fff;
-  padding: 10px;
+  padding: 0; /* Padding removed to align with the sections */
 }
 
 header, footer, nav {
   padding: 10px;
   border: 1px solid #ccc;
-  margin-bottom: 10px;
 }
 
 header, footer {
@@ -26,40 +25,51 @@ header, footer {
 
 nav {
   background-color: #ddf;
+  margin-bottom: 10px;
 }
 
 .gallery-container {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
-  justify-content: flex-start; /* Items are aligned to the start of the container */
+  margin: 0 10px; /* Adjust for the padding on the header and nav */
 }
 
 section {
   border: 1px solid #ccc;
-  margin-bottom: 10px;
-  flex: 1 1 auto; /* Flexible basis and growing according to the screen size */
-  max-width: calc(50% - 20px); /* Maximum width for two columns layout */
+  margin-bottom: 10px; /* Add bottom margin for spacing */
+  flex-grow: 1;
+  flex-basis: calc((100% / 2) - 20px); /* Start with 2 columns layout */
+  max-width: calc((100% / 2) - 20px); /* Ensure max width does not exceed flex-basis */
 }
 
 section img {
-  width: 100%;
-  height: auto;
-  display: block;
+  width: 100%; /* Makes image responsive */
+  height: auto; /* Maintain aspect ratio */
+  display: block; /* Removes bottom space under the image */
 }
 
-/* Adjusts to 3 columns layout for larger screens */
+/* Media Queries */
+/* For viewports 961px and wider */
 @media (min-width: 961px) {
   section {
-    flex: 1 1 calc(33.33% - 20px);
-    max-width: calc(33.33% - 20px);
+    flex-basis: calc((100% / 3) - 20px); /* Adjust to 3 columns layout */
+    max-width: calc((100% / 3) - 20px); /* Match max width to flex-basis */
   }
 }
 
-/* Adjusts to 1 column layout for smaller screens */
-@media (max-width: 640px) {
+/* For viewports 1281px and wider */
+@media (min-width: 1281px) {
   section {
-    flex: 1 1 100%;
-    max-width: 100%;
+    flex-basis: calc((100% / 4) - 20px); /* Adjust to 4 columns layout */
+    max-width: calc((100% / 4) - 20px); /* Match max width to flex-basis */
+  }
+}
+
+/* For viewports 1600px and wider */
+@media (min-width: 1600px) {
+  section {
+    flex-basis: calc((100% / 6) - 20px); /* Adjust to 6 columns layout */
+    max-width: calc((100% / 6) - 20px); /* Match max width to flex-basis */
   }
 }
