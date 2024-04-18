@@ -29,14 +29,14 @@ nav {
 .gallery-container {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 5px;
   justify-content: center; /* Center items within the container */
-  padding: 0 10px; /* Add horizontal padding */
+  padding: 0 5px; /* Add horizontal padding */
 }
 
 section {
   border: 1px solid #ccc;
-  margin-bottom: 10px; /* Bottom margin for spacing */
+  margin-bottom: 5px; /* Bottom margin for spacing */
   box-sizing: border-box; /* Include padding and border in the element's total width and height */
   flex: 1 0 auto; /* Grow to fit the container minus margins */
 }
