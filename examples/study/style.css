@@ -54,6 +54,13 @@ section img {
   }
 }
 
+@media (max-width: 767px) {
+  section {
+    flex: 1 1 calc(50% - 20px); /* Adjust to 2 columns layout */
+    max-width: calc(50% - 20px); /* Match max width to flex-basis */
+  }
+}
+
 @media (min-width: 901px) {
   section {
     max-width: calc(33.333% - 20px); /* 3 columns for viewports wider than 900px */
