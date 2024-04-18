@@ -27,6 +27,8 @@ nav {
 .gallery-container {
   display: flex;
   flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center; /* Center items within the container */
   margin-right: -10px; /* Compensate for the right padding on the last item in a row */
   margin-left: -10px; /* Compensate for the left padding on the first item in a row */
 }
