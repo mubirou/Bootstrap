@@ -11,15 +11,11 @@ body, h1, p {
 body {
   font-family: "Noto Sans JP", "Roboto", "Arial", sans-serif;
   background-color: #fff;
-  padding: 0; /* Padding removed to align with the sections */
 }
 
 header, footer, nav {
   padding: 10px;
   border: 1px solid #ccc;
-}
-
-header, footer {
   background-color: #f3f3f3;
 }
 
@@ -31,45 +27,53 @@ nav {
 .gallery-container {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
-  margin: 0 10px; /* Adjust for the padding on the header and nav */
+  margin-right: -10px; /* Compensate for the right padding on the last item in a row */
+  margin-left: -10px; /* Compensate for the left padding on the first item in a row */
 }
 
 section {
   border: 1px solid #ccc;
-  margin-bottom: 10px; /* Add bottom margin for spacing */
-  flex-grow: 1;
-  flex-basis: calc((100% / 2) - 20px); /* Start with 2 columns layout */
-  max-width: calc((100% / 2) - 20px); /* Ensure max width does not exceed flex-basis */
+  margin-bottom: 10px; /* Bottom margin for spacing */
+  margin-right: 10px; /* Add right margin for each item */
+  margin-left: 10px; /* Add left margin for each item */
+  flex: 1 0 auto; /* Grow to fit the container minus margins */
+  max-width: calc(50% - 20px); /* Start with 2 columns and adjust for margins */
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
 }
 
 section img {
-  width: 100%; /* Makes image responsive */
-  height: auto; /* Maintain aspect ratio */
-  display: block; /* Removes bottom space under the image */
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
-/* Media Queries */
-/* For viewports 961px and wider */
-@media (min-width: 961px) {
+/* Media Queries for Responsive Layout */
+@media (min-width: 601px) {
   section {
-    flex-basis: calc((100% / 3) - 20px); /* Adjust to 3 columns layout */
-    max-width: calc((100% / 3) - 20px); /* Match max width to flex-basis */
+    max-width: calc(50% - 20px); /* 2 columns for viewports wider than 600px */
   }
 }
 
-/* For viewports 1281px and wider */
-@media (min-width: 1281px) {
+@media (min-width: 901px) {
   section {
-    flex-basis: calc((100% / 4) - 20px); /* Adjust to 4 columns layout */
-    max-width: calc((100% / 4) - 20px); /* Match max width to flex-basis */
+    max-width: calc(33.333% - 20px); /* 3 columns for viewports wider than 900px */
   }
 }
 
-/* For viewports 1600px and wider */
-@media (min-width: 1600px) {
+@media (min-width: 1201px) {
   section {
-    flex-basis: calc((100% / 6) - 20px); /* Adjust to 6 columns layout */
-    max-width: calc((100% / 6) - 20px); /* Match max width to flex-basis */
+    max-width: calc(25% - 20px); /* 4 columns for viewports wider than 1200px */
+  }
+}
+
+@media (min-width: 1501px) {
+  section {
+    max-width: calc(20% - 20px); /* 5 columns for viewports wider than 1500px */
+  }
+}
+
+@media (min-width: 1801px) {
+  section {
+    max-width: calc(16.666% - 20px); /* 6 columns for viewports wider than 1800px */
   }
 }
