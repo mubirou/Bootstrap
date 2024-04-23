@@ -11,7 +11,6 @@ body, h1, p {
 body {
   font-family: "Noto Sans JP", "Roboto", "Arial", sans-serif;
   background-color: #fff;
-  padding: 0; /* No padding for the body */
 }
 
 header, footer, nav {
@@ -28,17 +27,15 @@ nav {
 .gallery-container {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center; /* Center items within the container */
+  justify-content: center;
   gap: 10px;
-  padding: 0 10px; /* Horizontal padding */
 }
 
 section {
   border: 1px solid #ccc;
-  margin-bottom: 10px; /* Bottom margin for spacing */
-  flex: 1 0 auto; /* Grow to fit the container minus margins */
-  max-width: calc(50% - 20px); /* Starting with 2 columns on mobile */
-  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+  margin-bottom: 10px;
+  flex: 1 0 auto;
+  max-width: calc(50% - 20px);
 }
 
 section img {
@@ -47,38 +44,39 @@ section img {
   display: block;
 }
 
-/* Media Queries for Responsive Layout */
+.image-text p {
+  text-align: center;
+  padding: 5px;
+  font-size: 0.9em;
+}
+
+/* Responsive adjustments */
 @media (min-width: 601px) {
   section {
-    /* For screens larger than 600px, adjust to 2 columns */
     max-width: calc(50% - 20px);
   }
 }
 
 @media (min-width: 961px) {
   section {
-    /* For screens larger than 960px, adjust to 3 columns */
     max-width: calc(33.333% - 20px);
   }
 }
 
 @media (min-width: 1281px) {
   section {
-    /* For screens larger than 1280px, adjust to 4 columns */
     max-width: calc(25% - 20px);
   }
 }
 
 @media (min-width: 1501px) {
   section {
-    /* For screens larger than 1500px, adjust to 5 columns */
     max-width: calc(20% - 20px);
   }
 }
 
 @media (min-width: 1801px) {
   section {
-    /* For screens larger than 1800px, adjust to 6 columns */
     max-width: calc(16.666% - 20px);
   }
 }
