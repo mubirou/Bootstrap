@@ -11,6 +11,7 @@ body, h1, p {
 body {
   font-family: "Noto Sans JP", "Roboto", "Arial", sans-serif;
   background-color: #fff;
+  padding: 0; /* No padding for the body */
 }
 
 header, footer, nav {
@@ -27,17 +28,17 @@ nav {
 .gallery-container {
   display: flex;
   flex-wrap: wrap;
-  justify-content: flex-start; /* Align items to the start */
+  justify-content: center; /* Center items within the container */
   gap: 10px;
-  padding: 0 10px; /* Same padding as the header and footer */
-  margin: 0 -10px; /* Counteract the padding on the container */
+  padding: 0 10px; /* Horizontal padding */
 }
 
 section {
   border: 1px solid #ccc;
-  padding-bottom: 10px; /* padding bottom instead of margin */
-  flex-basis: calc(20% - 20px); /* Adjust basis to 20% minus gap */
-  max-width: calc(20% - 20px); /* Maximum width set to same as flex-basis */
+  margin-bottom: 10px; /* Bottom margin for spacing */
+  flex: 1 0 auto; /* Grow to fit the container minus margins */
+  max-width: calc(50% - 20px); /* Starting with 2 columns on mobile */
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
 }
 
 section img {
@@ -46,47 +47,38 @@ section img {
   display: block;
 }
 
-.image-text {
-  text-align: left; /* Align text to the left */
-  padding: 5px;
-}
-
-.image-text p {
-  font-size: 0.9em;
-}
-
-/* Responsive adjustments */
+/* Media Queries for Responsive Layout */
 @media (min-width: 601px) {
   section {
-    flex-basis: calc(50% - 20px); /* Adjust basis to 50% minus gap */
-    max-width: calc(50% - 20px); /* Maximum width set to same as flex-basis */
+    /* For screens larger than 600px, adjust to 2 columns */
+    max-width: calc(50% - 20px);
   }
 }
 
 @media (min-width: 961px) {
   section {
-    flex-basis: calc(33.333% - 20px); /* Adjust basis to 33.333% minus gap */
-    max-width: calc(33.333% - 20px); /* Maximum width set to same as flex-basis */
+    /* For screens larger than 960px, adjust to 3 columns */
+    max-width: calc(33.333% - 20px);
   }
 }
 
 @media (min-width: 1281px) {
   section {
-    flex-basis: calc(25% - 20px); /* Adjust basis to 25% minus gap */
-    max-width: calc(25% - 20px); /* Maximum width set to same as flex-basis */
+    /* For screens larger than 1280px, adjust to 4 columns */
+    max-width: calc(25% - 20px);
   }
 }
 
 @media (min-width: 1501px) {
   section {
-    flex-basis: calc(20% - 20px); /* Stay at 20% minus gap */
-    max-width: calc(20% - 20px); /* Maximum width set to same as flex-basis */
+    /* For screens larger than 1500px, adjust to 5 columns */
+    max-width: calc(20% - 20px);
   }
 }
 
 @media (min-width: 1801px) {
   section {
-    flex-basis: calc(16.666% - 20px); /* Adjust basis to 16.666% minus gap */
-    max-width: calc(16.666% - 20px); /* Maximum width set to same as flex-basis */
+    /* For screens larger than 1800px, adjust to 6 columns */
+    max-width: calc(16.666% - 20px);
   }
 }
