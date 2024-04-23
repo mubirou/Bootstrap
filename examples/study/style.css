@@ -13,14 +13,8 @@ body {
   background-color: #fff;
 }
 
-header, footer, nav, .gallery-container {
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 1200px; /* or whatever maximum width you desire */
-  padding: 10px;
-}
-
 header, footer, nav {
+  padding: 10px;
   border: 1px solid #ccc;
   background-color: #f3f3f3;
 }
@@ -33,14 +27,17 @@ nav {
 .gallery-container {
   display: flex;
   flex-wrap: wrap;
+  justify-content: flex-start; /* Align items to the start */
   gap: 10px;
+  padding: 0 10px; /* Same padding as the header and footer */
+  margin: 0 -10px; /* Counteract the padding on the container */
 }
 
 section {
   border: 1px solid #ccc;
-  margin-bottom: 10px;
-  flex: 1 0 calc(20% - 20px); /* Adjust the basis to 20% minus margin */
-  max-width: calc(20% - 20px);
+  padding-bottom: 10px; /* padding bottom instead of margin */
+  flex-basis: calc(20% - 20px); /* Adjust basis to 20% minus gap */
+  max-width: calc(20% - 20px); /* Maximum width set to same as flex-basis */
 }
 
 section img {
@@ -50,7 +47,7 @@ section img {
 }
 
 .image-text {
-  text-align: left;
+  text-align: left; /* Align text to the left */
   padding: 5px;
 }
 
@@ -61,35 +58,35 @@ section img {
 /* Responsive adjustments */
 @media (min-width: 601px) {
   section {
-    flex: 1 0 calc(50% - 20px);
-    max-width: calc(50% - 20px);
+    flex-basis: calc(50% - 20px); /* Adjust basis to 50% minus gap */
+    max-width: calc(50% - 20px); /* Maximum width set to same as flex-basis */
   }
 }
 
 @media (min-width: 961px) {
   section {
-    flex: 1 0 calc(33.333% - 20px);
-    max-width: calc(33.333% - 20px);
+    flex-basis: calc(33.333% - 20px); /* Adjust basis to 33.333% minus gap */
+    max-width: calc(33.333% - 20px); /* Maximum width set to same as flex-basis */
   }
 }
 
 @media (min-width: 1281px) {
   section {
-    flex: 1 0 calc(25% - 20px);
-    max-width: calc(25% - 20px);
+    flex-basis: calc(25% - 20px); /* Adjust basis to 25% minus gap */
+    max-width: calc(25% - 20px); /* Maximum width set to same as flex-basis */
   }
 }
 
 @media (min-width: 1501px) {
   section {
-    flex: 1 0 calc(20% - 20px);
-    max-width: calc(20% - 20px);
+    flex-basis: calc(20% - 20px); /* Stay at 20% minus gap */
+    max-width: calc(20% - 20px); /* Maximum width set to same as flex-basis */
   }
 }
 
 @media (min-width: 1801px) {
   section {
-    flex: 1 0 calc(16.666% - 20px);
-    max-width: calc(16.666% - 20px);
+    flex-basis: calc(16.666% - 20px); /* Adjust basis to 16.666% minus gap */
+    max-width: calc(16.666% - 20px); /* Maximum width set to same as flex-basis */
   }
 }
