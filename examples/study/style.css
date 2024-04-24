@@ -9,6 +9,7 @@ body, h1, p {
 }
 
 body {
+  padding-top: 45px; /* ヘッダーの高さに合わせて調整する */
   font-family: "Noto Sans JP", "Roboto", "Arial", sans-serif;
   background-color: #fff;
 }
@@ -17,6 +18,14 @@ header, footer, nav {
   padding: 10px;
   border: 1px solid #ccc;
   background-color: #f3f3f3;
+}
+
+header {
+  position: fixed; /* ヘッダーを固定する */
+  top: 0; /* 上部から0pxの位置に固定する */
+  left: 0; /* 左端から0pxの位置に固定する */
+  width: 100%; /* 幅を100%にする */
+  z-index: 1000; /* ヘッダーを最前面に表示する */
 }
 
 nav {
