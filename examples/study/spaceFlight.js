@@ -2,7 +2,7 @@
 addEventListener("load", load_window, false);
 
 function load_window() {
-    var _canvas = new canvaslite.Canvas("myCanvas");
+    var _canvas = new canvaslite.Canvas("canvas_spaceFlight");
     _canvas.addEventListener("enterframe", enterframe_canvas); 	_canvas.enabledContextMenu(false);
     _canvas.enabledContextMenu(false);
     _canvas.fps = 60;
