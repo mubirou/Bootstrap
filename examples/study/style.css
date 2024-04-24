@@ -90,3 +90,10 @@ section img {
     max-width: calc(16.666% - 15px);
   }
 }
+
+@media only screen and (max-width: 767px) and (orientation: landscape) {
+  .gallery-container section {
+    max-width: calc(33.333% - 20px);
+    flex: 1 0 calc(33.333% - 20px);
+  }
+}
