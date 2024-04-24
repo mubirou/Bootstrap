@@ -35,7 +35,7 @@ section {
   border: 1px solid #ccc;
   margin-bottom: 10px;
   flex: 1 0 auto;
-  max-width: calc(50% - 20px); /* Adjust max-width for responsive design */
+  max-width: calc(50% - 20px);
 }
 
 section img {
@@ -45,10 +45,10 @@ section img {
 }
 
 .image-text p {
-  text-align: left; /* Align text to the left */
+  text-align: left; /* 左寄せに変更 */
   padding: 5px;
   font-size: 0.9em;
-  line-height: 1.4; /* Adjust line-height for better readability */
+  line-height: 1.4; /* 行間をなくす */
 }
 
 /* Responsive adjustments */
