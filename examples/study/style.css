@@ -9,7 +9,7 @@ body, h1, p {
 }
 
 body {
-  padding-top: 44px; /* ヘッダーの高さに合わせて調整する */
+  padding-top: 43px; /* ヘッダーの高さに合わせて調整する */
   font-family: "Noto Sans JP", "Roboto", "Arial", sans-serif;
   background-color: #fff;
 }
