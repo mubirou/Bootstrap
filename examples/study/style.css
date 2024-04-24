@@ -53,6 +53,12 @@ section img {
   display: block;
 }
 
+section canvas {
+  width: 100%; /* canvasの幅をセクションの幅に合わせる */
+  height: auto; /* 高さを自動調整 */
+  max-height: 150px; /* canvasの最大高さを設定 */
+}
+
 .image-text p {
   text-align: left; /* 左寄せに変更 */
   padding: 3px;
