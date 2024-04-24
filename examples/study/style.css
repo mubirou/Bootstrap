@@ -48,7 +48,7 @@ section img {
   text-align: left; /* 左寄せに変更 */
   padding: 5px;
   font-size: 0.9em;
-  line-height: 1.4; /* 行間をなくす */
+  line-height: 1.1; /* 行間をなくす */
 }
 
 /* Responsive adjustments */
