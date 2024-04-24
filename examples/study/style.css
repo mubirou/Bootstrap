@@ -55,9 +55,9 @@ section img {
 
 .image-text p {
   text-align: left; /* 左寄せに変更 */
-  padding: 8px;
+  padding: 3px;
   font-size: 0.9em;
-  line-height: 0.2; /* 行間をなくす */
+  line-height: 1; /* 行間をなくす */
 }
 
 /* Responsive adjustments */
