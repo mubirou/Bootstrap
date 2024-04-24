@@ -91,7 +91,7 @@ section img {
   }
 }
 
-@media only screen and (max-width: 767px) and (orientation: landscape) {
+@media only screen and (max-width: 1111px) and (orientation: landscape) {
   .gallery-container section {
     max-width: calc(33.333% - 20px);
     flex: 1 0 calc(33.333% - 20px);
