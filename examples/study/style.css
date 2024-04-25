@@ -28,6 +28,10 @@ header {
   z-index: 1000; /* ヘッダーを最前面に表示する */
 }
 
+footer {
+  text-align: center;
+}
+
 nav {
   background-color: #ddf;
   margin-bottom: 10px;
